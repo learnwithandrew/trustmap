@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustMap | Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- top navigation bar -->
+    <header class="topbar">
+        <a href="index.html" class="logo">
+            TrustMap
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html" class="nav-link active">
+                Home
+            </a>
+
+            <a href="#devices" class="nav-link">
+                Devices
+            </a>
+
+            <a href="#" class="nav-link">
+                Settings
+            </a>
+        </nav>
+
+        <button class="profile-button" aria-label="Open profile">
+            <span aria-hidden="true">●</span>
+        </button>
+    </header>
+
+    <!-- dashboard content -->
+    <main class="dashboard">
+        <section class="dashboard-intro">
+            <h1>Good morning!</h1>
+            <p>
+                Here's what's connected to your network.
+            </p>
+        </section>
+
+        <!-- network status cards -->
+        <section class="status-grid" aria-label="Network status">
+            <article class="status-card">
+                <strong class="status-number">5</strong>
+                <span aria-hidden="true">▱</span>
+                <p>Devices</p>
+            </article>
+
+            <article class="status-card status-card-trusted">
+                <strong class="status-number">3</strong>
+                <span aria-hidden="true">♟</span>
+                <p>Trusted</p>
+            </article>
+
+            <article class="status-card">
+                <strong class="status-number">1</strong>
+                <span aria-hidden="true">♟</span>
+                <p>Guest</p>
+            </article>
+
+            <article class="status-card status-card-attention">
+                <strong class="status-number">1</strong>
+                <span aria-hidden="true">⚠</span>
+                <p>Needs Attention</p>
+            </article>
+        </section>
+
+        <!-- attention alert -->
+        <section class="attention-alert" aria-label="Device attention required">
+            <span class="alert-icon" aria-hidden="true">⚠</span>
+            <div class="alert-message">
+                <strong> 1 device needs attention </strong>
+                <p> Review the unknown device below. </p>
+            </div>
+
+            <a href="device.html" class="alert-action" aria-label="Review unknown device">
+                >
+            </a>
+        </section>
+
+        <!-- connected devices section -->
+        <section class="devices-section" id="devices">
+            <h2>Connected Devices</h2>
+
+            <!-- SEARCH + FILTER -->
+            <div class="device-controls">
+                <label class="search-box">
+                    <span aria-hidden="true">⌕</span>
+                    <input type="search" placeholder="Search devices..." aria-label="Search devices">
+                </label>
+
+                <select class="device-filter" aria-label="Filter devices">
+                    <option>All Devices</option>
+                    <option>Trusted</option>
+                    <option>Guest</option>
+                    <option>Unknown</option>
+                </select>
+            </div>
+
+            <!-- devices table -->
+            <div class="table-wrapper">
+                <table class="device-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Device Name</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">IP Address</th>
+                            <th scope="col">
+                                <span class="sr-only">Action</span>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Amina's Laptop</td>
+                            <td>Laptop</td>
+                            <td>
+                                <span class="device-status trusted">
+                                    <span class="status-dot"></span>
+                                    Trusted
+                                </span>
+                            </td>
+                            <td>192.168.1.10</td>
+                            <td>
+                                <span aria-hidden="true"></span>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Kevin's Phone</td>
+                            <td>Phone</td>
+
+                            <td>
+                                <span class="device-status trusted">
+                                    <span class="status-dot">></span>
+                                    Trusted
+                                </span>
+                            </td>
+                            <td>192.168.1.11</td>
+                            <td>
+                                <span aria-hidden="true">></span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Office Printer</td>
+                            <td>Printer</td>
+                            <td>
+                                <span class="device-status trusted">
+                                    <span class="status-dot"></span>
+                                    Trusted
+                                </span>
+                            </td>
+                            <td>192.168.1.12</td>
+                            <td>
+                                <span aria-hidden="true">></span>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Guest Laptop</td>
+                            <td>Laptop</td>
+                            <td>
+                                <span class="device-status guest">
+                                    <span class="status-dot"></span>
+                                    Guest
+                                </span>
+                            </td>
+                            <td>192.168.1.20</td>
+                            <td>
+                                <span aria-hidden="true">></span>
+                            </td>
+                        </tr>
+
+                        <tr class="unknown-device">
+                            <td>Unknown Device</td>
+                            <td>Unknown</td>
+                            <td>
+                                <span class="device-status unknown">
+                                    <span class="status-dot"></span>
+                                    Unknown
+                                </span>
+                            </td>
+                            <td>192.168.1.27</td>
+                            <td>
+                                <a href="device.html" aria-label="View unknown device">></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
