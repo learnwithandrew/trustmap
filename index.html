@@ -5,32 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrustMap | Dashboard</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <!-- top navigation bar -->
     <header class="topbar">
-        <a href="index.html" class="logo">
-            TrustMap
-        </a>
-        <nav class="main-nav" aria-label="Main navigation">
-            <a href="index.html" class="nav-link active">
-                Home
+        <div class="topbar-container">
+            <a href="index.html" class="logo">
+                TrustMap
             </a>
 
-            <a href="#devices" class="nav-link">
-                Devices
-            </a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html" class="nav-link active">
+                    <span aria-hidden="true">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </span>
+                    Home
+                </a>
 
-            <a href="#" class="nav-link">
-                Settings
-            </a>
-        </nav>
+                <a href="device.html" class="nav-link">
+                    <span aria-hidden="true">
+                        <i class="fa fa-laptop" aria-hidden="true"></i>
+                    </span>
+                    Devices
+                </a>
 
-        <button class="profile-button" aria-label="Open profile">
-            <span aria-hidden="true">●</span>
-        </button>
+                <a href="#" class="nav-link">
+                    <span aria-hidden="true">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </span>
+                    Settings
+                </a>
+            </nav>
+
+            <button class="profile-button" aria-label="Open profile">
+                <span aria-hidden="true">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </span>
+            </button>
+        </div>
     </header>
 
     <!-- dashboard content -->
@@ -46,39 +61,49 @@
         <section class="status-grid" aria-label="Network status">
             <article class="status-card">
                 <strong class="status-number">5</strong>
-                <span aria-hidden="true">▱</span>
+                <span aria-hidden="true">
+                    <i class="fa fa-laptop" aria-hidden="true"></i>
+                </span>
                 <p>Devices</p>
             </article>
 
             <article class="status-card status-card-trusted">
                 <strong class="status-number">3</strong>
-                <span aria-hidden="true">♟</span>
+                <span aria-hidden="true">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </span>
                 <p>Trusted</p>
             </article>
 
             <article class="status-card">
                 <strong class="status-number">1</strong>
-                <span aria-hidden="true">♟</span>
+                <span aria-hidden="true">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </span>
                 <p>Guest</p>
             </article>
 
             <article class="status-card status-card-attention">
                 <strong class="status-number">1</strong>
-                <span aria-hidden="true">⚠</span>
+                <span aria-hidden="true">
+                    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                </span>
                 <p>Needs Attention</p>
             </article>
         </section>
 
         <!-- attention alert -->
         <section class="attention-alert" aria-label="Device attention required">
-            <span class="alert-icon" aria-hidden="true">⚠</span>
+            <span class="alert-icon" aria-hidden="true">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            </span>
             <div class="alert-message">
                 <strong> 1 device needs attention </strong>
                 <p> Review the unknown device below. </p>
             </div>
 
             <a href="device.html" class="alert-action" aria-label="Review unknown device">
-                >
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
             </a>
         </section>
 
@@ -89,7 +114,7 @@
             <!-- SEARCH + FILTER -->
             <div class="device-controls">
                 <label class="search-box">
-                    <span aria-hidden="true">⌕</span>
+                    <span aria-hidden="true"><i class="fa fa-search" aria-hidden="true"></i></span>
                     <input type="search" placeholder="Search devices..." aria-label="Search devices">
                 </label>
 
@@ -128,7 +153,9 @@
                             </td>
                             <td>192.168.1.10</td>
                             <td>
-                                <span aria-hidden="true"></span>
+                                <span aria-hidden="true">
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </span>
                             </td>
                         </tr>
 
@@ -139,13 +166,15 @@
 
                             <td>
                                 <span class="device-status trusted">
-                                    <span class="status-dot">></span>
+                                    <span class="status-dot"></span>    
                                     Trusted
                                 </span>
                             </td>
                             <td>192.168.1.11</td>
                             <td>
-                                <span aria-hidden="true">></span>
+                                <span aria-hidden="true">
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </span>
                             </td>
                         </tr>
 
@@ -160,7 +189,9 @@
                             </td>
                             <td>192.168.1.12</td>
                             <td>
-                                <span aria-hidden="true">></span>
+                                <span aria-hidden="true">
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </span>
                             </td>
                         </tr>
                         
@@ -175,7 +206,9 @@
                             </td>
                             <td>192.168.1.20</td>
                             <td>
-                                <span aria-hidden="true">></span>
+                                <span aria-hidden="true">
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </span>
                             </td>
                         </tr>
 
@@ -190,7 +223,9 @@
                             </td>
                             <td>192.168.1.27</td>
                             <td>
-                                <a href="device.html" aria-label="View unknown device">></a>
+                                <span aria-hidden="true">
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </span>
                             </td>
                         </tr>
                     </tbody>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustMap | Device Details</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <!-- top navigation bar -->
+    <header class="topbar">
+        <div class="topbar-container">
+            <a href="index.html" class="logo">
+                TrustMap
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html" class="nav-link active">
+                    <span aria-hidden="true">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </span>
+                    Home
+                </a>
+
+                <a href="#devices" class="nav-link">
+                    <span aria-hidden="true">
+                        <i class="fa fa-laptop" aria-hidden="true"></i>
+                    </span>
+                    Devices
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span aria-hidden="true">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </span>
+                    Settings
+                </a>
+            </nav>
+
+            <button class="profile-button" aria-label="Open profile">
+                <span aria-hidden="true">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <!-- device details page content -->
+    <main class="device-page">
+        <!-- Back navigation -->
+        <a href="index.html" class="back-link">
+            <span aria-hidden="true">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </span>
+            Back to Devices
+        </a>
+
+        <!-- Device heading -->
+        <section class="device-heading">
+            <div class="device-icon" aria-hidden="true">
+                <i class="fa fa-laptop" aria-hidden="true"></i>
+            </div>
+
+            <div class="device-heading-info">
+                <h1>Unknown Device</h1>
+                <div class="device-status unknown">
+                    <span class="status-dot"></span>
+                    Unknown
+                </div>
+                <p>First seen 8 minutes ago</p>
+            </div>
+        </section>
+
+        <!-- Device information -->
+        <section class="device-information" aria-labelledby="device-information-title">
+            <h2 id="device-information-title"class="sr-only">
+                Device information
+            </h2>
+
+            <dl class="device-details-list">
+                <div class="detail-row">
+                    <dt>Device Name</dt>
+                    <dd>
+                        Unknown Device
+                        <button class="icon-button" aria-label="Edit device name">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                        </button>
+                    </dd>
+                </div>
+
+                <div class="detail-row">
+                    <dt>Type</dt>
+                    <dd>
+                        <i class="fa fa-laptop" aria-hidden="true"></i>
+                        Unknown
+                    </dd>
+                </div>
+
+                <div class="detail-row">
+                    <dt>IP Address</dt>
+                    <dd>
+                        192.168.1.27
+                        <button class="icon-button" aria-label="Copy IP address">
+                          <i class="fa fa-copy" aria-hidden="true"></i>
+                        </button>
+                    </dd>
+                </div>
+
+                <div class="detail-row">
+                    <dt>MAC Address</dt>
+                    <dd>
+                        AA:BB:CC:DD:EE:FF
+                        <button class="icon-button" aria-label="Copy MAC address">
+                            <i class="fa fa-copy" aria-hidden="true"></i>
+                        </button>
+                    </dd>
+                </div>
+
+                <div class="detail-row">
+                    <dt>Status</dt>
+                    <dd>
+                        <span class="device-status unknown">
+                            <span class="status-dot"></span>
+                            Unknown
+                        </span>
+                    </dd>
+                </div>
+
+                <div class="detail-row">
+                    <dt>Access</dt>
+                    <dd>Restricted</dd>
+                </div>
+            </dl>
+        </section>
+
+        <!-- Recent activity -->
+        <section class="recent-activity">
+            <h2>Recent Activity</h2>
+            <ol class="activity-list">
+                <li>
+                    <span class="activity-dot"></span>
+                    <div>
+                        <p>Connected to network</p>
+                        <small>8 minutes ago</small>
+                    </div>
+                </li>
+
+                <li>
+                    <span class="activity-dot"></span>
+                    <div>
+                        <p>Active on local network</p>
+                        <small>6 minutes ago</small>
+                    </div>
+                </li>
+
+                <li class="activity-muted">
+                    <span class="activity-dot"></span>
+                    <div>
+                        <p>No additional activity</p>
+                        <small>—</small>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Trust decision -->
+        <section class="device-actions">
+            <h2>What would you like to do?</h2>
+            <div class="action-buttons">
+                <a href="index.html" class="action-button trust-button">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                    Trust Device
+                </a>
+
+                <button type="button" class="action-button restrict-button">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    Keep Restricted
+                </button>
+
+                <button type="button" class="action-button block-button">
+                    <i class="fa fa-ban" aria-hidden="true"></i>
+                    Block Access
+                </button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
