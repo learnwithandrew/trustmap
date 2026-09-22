@@ -309,10 +309,7 @@ select {
     border: 0;
 }
 
-/* =========================
-   DEVICE DETAILS PAGE
-========================= */
-
+/* device page details */
 .device-page {
     width: min(100% - 40px, 760px);
 
@@ -320,16 +317,12 @@ select {
     padding: 32px 0 60px;
 }
 
-
 /* BACK LINK */
-
 .back-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-
     margin-bottom: 28px;
-
     color: #374151;
     font-size: 14px;
 }
@@ -338,39 +331,28 @@ select {
     color: #1d4ed8;
 }
 
-
-/* =========================
-   DEVICE HEADING
-========================= */
-
+/* device heading */
 .device-heading {
     display: flex;
     align-items: center;
     gap: 24px;
-
     margin-bottom: 20px;
 }
 
 .device-icon {
     width: 110px;
     height: 110px;
-
     display: grid;
     place-items: center;
-
     flex-shrink: 0;
-
     background: #f9fafb;
-
     border: 1px solid #e5e7eb;
     border-radius: 10px;
-
     font-size: 50px;
 }
 
 .device-heading-info h1 {
     margin: 0 0 8px;
-
     font-size: 26px;
 }
 
@@ -380,23 +362,15 @@ select {
 
 .device-heading-info p {
     margin: 0;
-
     color: #6b7280;
     font-size: 14px;
 }
 
-
-/* =========================
-   DEVICE INFORMATION
-========================= */
-
+/* device information */
 .device-information {
     margin-bottom: 30px;
-
     padding: 22px;
-
     background: #ffffff;
-
     border: 1px solid #e5e7eb;
     border-radius: 10px;
 }
@@ -407,11 +381,8 @@ select {
 
 .detail-row {
     display: grid;
-
     grid-template-columns: 160px 1fr;
-
     align-items: center;
-
     min-height: 48px;
 }
 
@@ -422,29 +393,22 @@ select {
 
 .detail-row dd {
     margin: 0;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-
     font-size: 14px;
 }
 
 .icon-button {
     border: none;
     background: transparent;
-
     cursor: pointer;
-
     font-size: 18px;
 }
 
 
-/* =========================
-   RECENT ACTIVITY
-========================= */
-
+/* recent activity */
 .recent-activity {
     margin-bottom: 30px;
 }
@@ -452,56 +416,43 @@ select {
 .recent-activity h2,
 .device-actions h2 {
     margin: 0 0 16px;
-
     font-size: 19px;
 }
 
 .activity-list {
     margin: 0;
     padding: 0;
-
     list-style: none;
 }
 
 .activity-list li {
     position: relative;
-
     display: flex;
     gap: 16px;
-
     min-height: 60px;
 }
 
 .activity-list li:not(:last-child)::before {
     content: "";
-
     position: absolute;
-
     left: 5px;
     top: 15px;
-
     width: 1px;
     height: 48px;
-
     background: #d1d5db;
 }
 
 .activity-dot {
     width: 11px;
     height: 11px;
-
     margin-top: 5px;
-
     flex-shrink: 0;
-
     background: #4b5563;
-
     border-radius: 50%;
 }
 
 .activity-list p {
     margin: 0 0 3px;
-
     font-size: 14px;
 }
 
@@ -513,14 +464,9 @@ select {
     background: #9ca3af;
 }
 
-
-/* =========================
-   DEVICE ACTIONS
-========================= */
-
+/* device actions */
 .device-actions {
     padding-top: 22px;
-
     border-top: 1px solid #e5e7eb;
 }
 
@@ -531,26 +477,19 @@ select {
 
 .action-button {
     min-height: 48px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     gap: 10px;
-
     padding: 0 18px;
-
     border-radius: 8px;
-
     font-weight: 600;
     cursor: pointer;
 }
 
 .trust-button {
     background: #171717;
-
     color: #ffffff;
-
     border: 1px solid #171717;
 }
 
@@ -560,27 +499,19 @@ select {
 
 .restrict-button {
     background: #ffffff;
-
     color: #111827;
-
     border: 1px solid #d1d5db;
 }
 
 .block-button {
     background: #fff5f5;
-
     color: #dc2626;
-
     border: 1px solid #fca5a5;
 }
 
 
-/* =========================
-   DEVICE PAGE RESPONSIVE
-========================= */
-
+/* device page responsive design */
 @media (max-width: 600px) {
-
     .device-page {
         width: min(100% - 24px, 760px);
     }
