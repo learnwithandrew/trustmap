@@ -44,3 +44,33 @@ const devices = [
         access: "Restricted"
     }
 ];
+
+const deviceTableBody = document.getElementById("device-table-body");
+
+function renderDevices() {
+    deviceTableBody.innerHTML = "";
+
+    devices.forEach(function(device) {
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+            <td>${device.name}</td>
+            <td>${device.type}</td>
+            <td>
+                <span class="device-status ${device.status.toLowerCase()}">
+                    <span class="status-dot"></span>
+                    ${device.status}
+                </span>
+            </td>
+            <td>${device.ip}</td>
+            <td>
+                <a href="device.html?id=${device.id}" aria-label="View ${device.name}">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </td>
+        `;
+        deviceTableBody.appendChild(row);
+    });
+}
+
+renderDevices();
