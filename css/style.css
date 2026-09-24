@@ -509,6 +509,16 @@ select {
     border: 1px solid #fca5a5;
 }
 
+.all-clear-alert {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+    color: #15803d;
+}
+
+.alert-message p {
+    color: #6b7280;
+}
+
 
 /* device page responsive design */
 @media (max-width: 600px) {

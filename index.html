@@ -52,15 +52,13 @@
     <main class="dashboard">
         <section class="dashboard-intro">
             <h1>Good morning!</h1>
-            <p>
-                Here's what's connected to your network.
-            </p>
+            <p> Here's what's connected to your network.</p>
         </section>
 
         <!-- network status cards -->
         <section class="status-grid" aria-label="Network status">
             <article class="status-card">
-                <strong class="status-number">5</strong>
+                <strong class="status-number" id="device-count">5</strong>
                 <span aria-hidden="true">
                     <i class="fa fa-laptop" aria-hidden="true"></i>
                 </span>
@@ -68,7 +66,7 @@
             </article>
 
             <article class="status-card status-card-trusted">
-                <strong class="status-number">3</strong>
+                <strong class="status-number" id="trusted-count">3</strong>
                 <span aria-hidden="true">
                     <i class="fa fa-user" aria-hidden="true"></i>
                 </span>
@@ -76,7 +74,7 @@
             </article>
 
             <article class="status-card">
-                <strong class="status-number">1</strong>
+                <strong class="status-number" id="guest-count">1</strong>
                 <span aria-hidden="true">
                     <i class="fa fa-user" aria-hidden="true"></i>
                 </span>
@@ -84,7 +82,7 @@
             </article>
 
             <article class="status-card status-card-attention">
-                <strong class="status-number">1</strong>
+                <strong class="status-number" id="attention-count">1</strong>
                 <span aria-hidden="true">
                     <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
                 </span>
@@ -93,7 +91,7 @@
         </section>
 
         <!-- attention alert -->
-        <section class="attention-alert" aria-label="Device attention required">
+        <section class="attention-alert" aria-label="Device attention required" id="network-alert">
             <span class="alert-icon" aria-hidden="true">
                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
             </span>
@@ -115,14 +113,14 @@
             <div class="device-controls">
                 <label class="search-box">
                     <span aria-hidden="true"><i class="fa fa-search" aria-hidden="true"></i></span>
-                    <input type="search" placeholder="Search devices..." aria-label="Search devices">
+                    <input type="search" id="device-search" placeholder="Search devices..." aria-label="Search devices">
                 </label>
 
-                <select class="device-filter" aria-label="Filter devices">
-                    <option>All Devices</option>
-                    <option>Trusted</option>
-                    <option>Guest</option>
-                    <option>Unknown</option>
+                <select class="device-filter" id="device-filter" aria-label="Filter devices">
+                    <option value="all">All Devices</option>
+                    <option value="trusted">Trusted</option>
+                    <option value="guest">Guest</option>
+                    <option value="unknown">Unknown</option>
                 </select>
             </div>
 
@@ -140,10 +138,7 @@
                             </th>
                         </tr>
                     </thead>
-
-                    <tbody id="device-table-body">
-                        
-                    </tbody>
+                    <tbody id="device-table-body"></tbody>
                 </table>
             </div>
         </section>
