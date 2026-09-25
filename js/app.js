@@ -102,10 +102,21 @@ function renderDeviceDetails(device) {
     document.getElementById("device-ip").textContent = device.ip;
     document.getElementById("device-mac").textContent = device.mac;
     document.getElementById("device-access").textContent = device.access;
-    document.getElementById("device-status-text").textContent = device.status;
 
-    const statusElement = document.getElementById("device-status");
-    statusElement.className = `device-status ${device.status.toLowerCase()}`;
+
+    // Device-Detail-Heading status
+    const headingStatus = document.getElementById("device-heading-status");
+    const headingStatusText = document.getElementById("device-heading-status-text");
+
+    headingStatusText.textContent = device.status;
+    headingStatus.className = `device-status ${device.status.toLowerCase()}`;
+
+    // Device-Detail body status
+    const detailStatus = document.getElementById("device-detail-status");
+    const detailStatusText = document.getElementById("device-detail-status-text");
+
+    detailStatusText.textContent = device.status;
+    detailStatus.className = `device-status ${device.status.toLowerCase()}`;
 }
 
 if (selectedDevice) {
@@ -197,21 +208,23 @@ if (deviceTableBody) {
 
 
 const deviceSearch = document.getElementById("device-search");
+const deviceFilter = document.getElementById("device-filter");
 
-if (deviceSearch) {
+function applyDeviceFilters() {
 
-    deviceSearch.addEventListener("input", function() {
+    const searchTerm = deviceSearch.value.toLowerCase();
+    const selectedStatus = deviceFilter.value;
 
-        const searchTerm = deviceSearch.value.toLowerCase();
-
-        const matchingDevices = devices.filter(function(device) {
-
-            return device.name
-                .toLowerCase()
-                .includes(searchTerm);
-            });
-
-        renderDevices(matchingDevices);
-
+    const filteredDevices = devices.filter(function(device) {
+        const matchesSearch = device.name.toLowerCase().includes(searchTerm);
+        const matchesStatus = selectedStatus === "all" || device.status.toLowerCase() === selectedStatus;
+        return matchesSearch && matchesStatus;
     });
+
+    renderDevices(filteredDevices);
+}
+
+if (deviceSearch && deviceFilter) {
+    deviceSearch.addEventListener("input", applyDeviceFilters);
+    deviceFilter.addEventListener("change", applyDeviceFilters);
 }
